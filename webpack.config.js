@@ -11,9 +11,29 @@ module.exports = {
         // exclude node_modules
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ["babel-loader"],
+            },
+            {
+                test:/\.css$/,
+                use:['style-loader','css-loader']
+            },
+            // {
+            //     test: /\.(PNG|JPG|GIF|SVG)$/,
+            //     loader:['url-loader', 'file-loader'],
+            //     options: {
+            //       limit: 12 * 1024
+            //     }
+            // }
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {},
+                  },
+                ],
             },
         ],
     },
