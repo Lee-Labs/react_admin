@@ -8,7 +8,7 @@ import './assets/css/index.css'
 
 import Layout from "./components/layout/Layout";
 
-document.title = 'Tua CRM'
+document.title = 'Lee CMS'
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
